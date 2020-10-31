@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Pharmex </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel = "icon" href="{% static 'css/images/image3.png' %}" type = "image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+
+</head>
+<body>
+<div class="topnav">
+
+        <div class="logo-image">
+            <img src="{% static 'css/images/image3.png' %}" class="img-fluid" style="width:63px;height:48px;">
+        </div>
+
+
+        <a class="active" href="{% url 'diseases' %}">Diseases</a>
+        <a href="#">Symptoms</a>
+        <a href="{% url 'about' %}">About Us!</a>
+
+</div>
+
+<div class="header">
+    <form>
+        <h1> PHARMEX </h1>
+        <br>
+        <p>Your doctor at home..</p>
+        <div class="form-box">
+            <input type="text" class="search-field disease" placeholder="Disease, Symptoms..">
+
+            <input list="type_list" class="search-field category" placeholder="Category">
+            <datalist id="type_list">
+            <option value="Diseases">
+            <option value="Symptoms">
+            <option value="Medicines">
+            <option value="Precautions">
+            </datalist>
+            <br>
+
+            <button class="search-btn" type="button">Search </button>
+
+
+        </div>
+    </form>
+
+</div>
+
+</body>
+</html>

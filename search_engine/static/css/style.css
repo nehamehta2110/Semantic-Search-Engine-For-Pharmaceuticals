@@ -1,0 +1,102 @@
+body {
+margin:0;
+padding:0;
+}
+
+.header
+{
+background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0)),url("images/image3.jpg");
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: sans-serif;
+height: 100%;
+}
+
+h1{
+color: #fff;
+margin-top: 30px;
+margin-bottom: 3px;
+font-size: 45px;
+letter-spacing: 2px;
+font-family: "Acme";
+}
+
+p{
+color: #fff;
+margin-bottom: 9px;
+font-size: 30px;
+letter-spacing: 2px;
+font-family: "Caveat";
+text-shadow: 4px 4px 4px #aaa;
+font-style: italic;
+}
+
+.search-field
+{
+height: 30px;
+padding: 10px;
+border: none;
+border-radius: 25px;
+outline: none;
+margin-bottom: 15px;
+}
+
+.disease
+{
+width: 400px;
+height: 30px;
+}
+
+.category
+{
+width: 200px;
+height: 30px;
+}
+
+.search-btn
+{
+height: 50px;
+width: 150px;
+background: #ffeb3b;
+border: none;
+color: #000;
+border-radius: 25px;
+margin-bottom: 300px;
+}
+
+.search-btn:hover
+{
+background: #ffc107;
+cursor: pointer;
+}
+
+.topnav {
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+
+
+.logo-image{
+    float: right;
+}

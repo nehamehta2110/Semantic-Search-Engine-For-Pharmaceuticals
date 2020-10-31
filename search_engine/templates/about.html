@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+
+</head>
+<body>
+<div class="topnav">
+
+        <div class="logo-image">
+            <img src="{% static 'css/images/image3.png' %}" class="img-fluid" style="width:63px;height:48px;">
+        </div>
+
+
+        <a class="active" href="{% url 'diseases' %}">Diseases</a>
+        <a href="#">Symptoms</a>
+        <a href="{% url 'about' %}">About Us!</a>
+
+</div>
+
+<div class="feature">
+    <h1>Features</h1>
+</div>
+<div class="wrapper">
+    <div class="card">
+        <img src="{% static 'css/images/text-search1.jpg' %}">
+        <div class="info">
+            <h1>Text search</h1>
+            <p>Text based search with semantic search via NLP based query processing and pattern matching from database in backend SQL</p>
+            <a href="#" class="about-btn">Try it!</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'css/images/image-search.jpg' %}">
+        <div class="info">
+            <h1>Image search</h1>
+            <p>We will implement OCR or Optical Character Recognition that will try to generate text from image and show the desired outputs if it matches in our database.</p>
+            <a href="#" class="about-btn">Try it!</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'css/images/voice-search1.jpg' %}">
+        <div class="info">
+            <h1>Voice search</h1>
+            <p>We will implement audio based search using Speech to Text processing and show the desired outputs if it matches in our database.</p>
+            <a href="#" class="about-btn">Try it!</a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
