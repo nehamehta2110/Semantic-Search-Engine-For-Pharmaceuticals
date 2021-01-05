@@ -1,0 +1,13 @@
+#output {
+    background-color:#F9F9F9;
+    overflow:hidden;
+    float:inherit;
+    }
+.hide {
+    display:none;
+    float:inherit;
+}
+.show {
+    display:block;
+    float:inherit;
+}

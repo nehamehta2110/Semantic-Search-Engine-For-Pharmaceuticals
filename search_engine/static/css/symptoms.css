@@ -1,0 +1,151 @@
+.topnav {
+  background-color: #000;
+  overflow: hidden;
+  margin-top: 0px;
+   font-family: "Acme";
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+
+
+.logo-image{
+    float: right;
+}
+
+body{
+margin:0;
+padding:0;
+background: url("images/23653750.jpg");
+background-size:cover;
+text-color: #000;
+background-position: 50% 50%;
+}
+
+.wrapper1{
+width:800px;
+margin:0 auto;
+}
+
+.wrapper1 h1{
+text-align: center;
+text-transform: uppercase;
+margin-top: 40px;
+font-family: "Acme";
+color: #fff;
+}
+
+.wrapper1 h2{
+text-align:left;
+font-family: "Caveat"
+color: #aaa;
+font-size: 20px;
+letter-spacing: 2px;
+text-shadow: 4px 4px 4px #aaa;
+font-style: italic;
+}
+
+.line{
+height: 25px;
+min-width: 800px;
+margin: 0 auto 10px;
+line-height: 25px;
+font-size: 14px;
+color: #fff;
+padding: 0 0 0 10px;
+position: relative;
+}
+
+.line:before{
+content: '';
+width: 100%;
+position: absolute;
+left: 0;
+height: 25px;
+top: 0;
+z-index: -2;
+background: #d2d6d7;
+}
+
+.line:after{
+content: '';
+width: 100%;
+transition: 0.8s;
+display: block;
+position: absolute;
+animation: animate 1 10s;
+left: 0;
+height: 25px;
+top: 0;
+z-index: -1;
+background: #333;
+}
+
+.line1:after{
+max-width: 10%;
+}
+
+.line2:after{
+max-width: 30%;
+}
+.line3:after{
+max-width: 40%;
+}
+.line4:after{
+max-width: 40%;
+}
+.line5:after{
+max-width: 50%;
+}
+.line6:after{
+max-width: 30%;
+}
+.line7:after{
+max-width: 30%;
+}
+.line8:after{
+max-width: 50%;
+}
+.line9:after{
+max-width: 30%;
+}
+.line10:after{
+max-width: 40%;
+}
+.line11:after{
+max-width: 30%;
+}
+.line12:after{
+max-width: 50%;
+}
+.line13:after{
+max-width: 60%;
+}
+.line14:after{
+max-width: 60%;
+}
+
+@keyframes animate{
+0%{
+width: 0;
+}
+100%{
+width: 100;
+}
+}

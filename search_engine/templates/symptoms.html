@@ -2,21 +2,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Diseases</title>
+    <title>Symptoms</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/symptoms.css' %}">
     <link rel = "icon" href="{% static 'css/images/image3.png' %}" type = "image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <div class="topnav">
 
         <div class="logo-image">
@@ -27,29 +26,40 @@
         <a class="active" href="{% url 'diseases' %}">Diseases</a>
         <a href="{% url 'symptoms' %}">Symptoms</a>
         <a href="{% url 'about' %}">Features</a>
-        <a href="{% url 'us' %}">About Us!</a></div>
-<div class="header">
-<div class="container">
-<table class="table table-dark table-striped">
-	<thead>
-	<tr>
-		<th>Disease</th>
-		<th>Description</th>
-	</tr>
-	</thead>
-	<tbody>
-	<!-- jinja2 Technique -->
-	{% if d %}
-	{% for i in d %}
-	<tr>
-		<td>{{i.Disease}}</td>
-		<td>{{i.Description}}</td>
-	</tr>
-	{% endfor %}
-	{% endif %}
-	</tbody>
-</table>
+        <a href="{% url 'us' %}">About Us!</a>
 </div>
+<div class="wrapper1">
+	<h1 style="color:black;"> Symptoms severity </h1>
+	<br><br>
+	<h2>Itching</h2>
+	<div class="line line1"> 10% </div>
+	<h2>Skin rash</h2>
+	<div class="line line2"> 30% </div>
+	<h2>Nodal skin eruptions</h2>
+	<div class="line line3"> 40% </div>
+	<h2>Continuous sneezing</h2>
+	<div class="line line4"> 40% </div>
+	<h2>Shivering</h2>
+	<div class="line line5"> 50% </div>
+	<h2>Chills</h2>
+	<div class="line line6"> 30% </div>
+	<h2>Joint pain</h2>
+	<div class="line line7"> 30% </div>
+	<h2>Stomach Pain</h2>
+	<div class="line line8"> 50% </div>
+	<h2>Acidity</h2>
+	<div class="line line9"> 30% </div>
+	<h2>Ulcers on Tongue</h2>
+	<div class="line line10"> 40% </div>
+	<h2>Muscle wasting</h2>
+	<div class="line line11"> 30% </div>
+	<h2>Vomiting</h2>
+	<div class="line line12"> 50% </div>
+	<h2>Burning Micturition</h2>
+	<div class="line line13"> 60% </div>
+	<h2>Spotting Urination</h2>
+	<div class="line line14"> 60% </div>
+
 </div>
 </body>
 </html>

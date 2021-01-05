@@ -4,10 +4,10 @@ from nltk.corpus import stopwords
 from gensim.parsing.preprocessing import strip_multiple_whitespaces, strip_numeric, strip_punctuation
 from gensim.parsing.preprocessing import strip_non_alphanum, strip_short
 
-symptoms = pd.read_csv("dataset/Symptom-severity.csv")
-precautions = pd.read_csv("dataset/disease_precaution.csv")
-description = pd.read_csv("dataset/disease_Description.csv")
-dataset = pd.read_csv("dataset/dataset.csv")
+symptoms = pd.read_csv("C://Users/HP/PycharmProjects/Semantic-Search-Engine-For-Pharmaceuticals/search_engine/static/csv/Symptom-severity.csv")
+precautions = pd.read_csv("C://Users/HP/PycharmProjects/Semantic-Search-Engine-For-Pharmaceuticals/search_engine/static/csv/disease_precaution.csv")
+description = pd.read_csv("C://Users/HP/PycharmProjects/Semantic-Search-Engine-For-Pharmaceuticals/search_engine/static/csv/disease_Description.csv")
+dataset = pd.read_csv("C://Users/HP/PycharmProjects/Semantic-Search-Engine-For-Pharmaceuticals/search_engine/static/csv/dataset.csv")
 
 
 def get_result(word_list):
@@ -49,6 +49,7 @@ def get_result(word_list):
     for i, ch in enumerate(list(dataset["Disease"].values)):
         if s.lower() == ch.lower():
             sympt = list(dataset.iloc[i, 1:].values)
+            sympt = [x for x in sympt if str(x) != 'nan']
             return sympt
 
     s = ''

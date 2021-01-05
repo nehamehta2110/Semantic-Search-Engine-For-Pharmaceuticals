@@ -2,17 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Diseases</title>
+    <title>Results</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel = "icon" href="{% static 'css/images/image3.png' %}" type = "image/x-icon">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -28,27 +28,18 @@
         <a href="{% url 'symptoms' %}">Symptoms</a>
         <a href="{% url 'about' %}">Features</a>
         <a href="{% url 'us' %}">About Us!</a></div>
-<div class="header">
-<div class="container">
-<table class="table table-dark table-striped">
-	<thead>
-	<tr>
-		<th>Disease</th>
-		<th>Description</th>
-	</tr>
-	</thead>
-	<tbody>
-	<!-- jinja2 Technique -->
-	{% if d %}
-	{% for i in d %}
-	<tr>
-		<td>{{i.Disease}}</td>
-		<td>{{i.Description}}</td>
-	</tr>
-	{% endfor %}
-	{% endif %}
-	</tbody>
-</table>
+<div class="header1">
+<div class="search-result">
+    <h3> You search query was: "{{ fulltext }}" </h3><br>
+    <p style="background-color:#fff;font-family: Arial, Helvetica, sans-serif;font-size:inherit;"> {% for word in result %}
+
+    <i class="fa fa-heartbeat" style="font-size:30px;color:red"></i> {{ word }}
+    <br/>
+
+    {% endfor %} </p>
+    <img src="{% static 'css/images/results.png' %}" style="width:170px;height:170px;">
+    <button class="search-btn" type="button"><a class="search-txt" href="{% url 'home' %}" >Back</a> </button>
+
 </div>
 </div>
 </body>

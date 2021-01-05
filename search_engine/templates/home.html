@@ -3,11 +3,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Pharmex </title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <link rel = "icon" href="{% static 'css/images/image3.png' %}" type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/audio.css' %}">
+    <script src="{% static 'js/audio.js' %}"></script>
 
 </head>
 <body>
@@ -17,20 +21,22 @@
             <img src="{% static 'css/images/image3.png' %}" class="img-fluid" style="width:63px;height:48px;">
         </div>
 
-
+        <a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
         <a class="active" href="{% url 'diseases' %}">Diseases</a>
-        <a href="#">Symptoms</a>
-        <a href="{% url 'about' %}">About Us!</a>
+        <a href="{% url 'symptoms' %}">Symptoms</a>
+        <a href="{% url 'about' %}">Features</a>
+        <a href="{% url 'us' %}">About Us!</a>
+
 
 </div>
 
 <div class="header">
-    <form>
+    <form action="{% url 'results' %}">
         <h1> PHARMEX </h1>
         <br>
-        <p>Your doctor at home..</p>
+        <p>Your doctor at home..<i class="fa fa-stethoscope" style="font-size:30px;padding:5px;"></i><i class="fa fa-heartbeat" style="font-size:30px;padding:5px;"></i><i class="fa fa-ambulance" style="font-size:30px;padding:5px;"></i></p>
         <div class="form-box">
-            <input type="text" class="search-field disease" placeholder="Disease, Symptoms..">
+            <input type="text" id="myInputID" class="search-field disease" name="queryinput" placeholder="Disease, Symptoms..">
 
             <input list="type_list" class="search-field category" placeholder="Category">
             <datalist id="type_list">
@@ -40,8 +46,24 @@
             <option value="Precautions">
             </datalist>
             <br>
+            <label class="search-btn" style="padding:10px;">
+                <i class="fa fa-search"></i>
+            <input type="submit" value="Text">Text
+            </label>
+            <button type="button" class="search-btn" onclick="runSpeechRecognition()"><i class="fa fa-microphone" style="padding:5px;"></i></i>Audio</button>
+            <label class="search-btn" style="padding:10px;">
+            <input type="file" id="img" value="IMAGE!" name="img" accept="image/*"/>
+            <i class="fa fa-camera" style="padding:4px;"></i>Image
+            </label>
+            <span id="action"></span><br>
+            <span id="output" class="hide"></span><br>
 
-            <button class="search-btn" type="button">Search </button>
+
+
+
+            <!--<button class="search-btn" type="submit"><a class="search-txt" href="{% url 'results' %}" >Image</a> </button>
+            <button class="search-btn" type="submit"><a class="search-txt" href="{% url 'results' %}" >Voice</a> </button>
+-->
 
 
         </div>

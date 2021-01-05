@@ -6,6 +6,11 @@
     <title>About</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+    <link rel = "icon" href="{% static 'css/images/image3.png' %}" type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 
 </head>
 <body>
@@ -15,11 +20,11 @@
             <img src="{% static 'css/images/image3.png' %}" class="img-fluid" style="width:63px;height:48px;">
         </div>
 
-
+        <a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
         <a class="active" href="{% url 'diseases' %}">Diseases</a>
-        <a href="#">Symptoms</a>
-        <a href="{% url 'about' %}">About Us!</a>
-
+        <a href="{% url 'symptoms' %}">Symptoms</a>
+        <a href="{% url 'about' %}">Features</a>
+        <a href="{% url 'us' %}">About Us!</a>
 </div>
 
 <div class="feature">
@@ -31,7 +36,7 @@
         <div class="info">
             <h1>Text search</h1>
             <p>Text based search with semantic search via NLP based query processing and pattern matching from database in backend SQL</p>
-            <a href="#" class="about-btn">Try it!</a>
+            <a href="{% url 'home' %}" class="about-btn">Try it!</a>
         </div>
     </div>
 
@@ -40,7 +45,7 @@
         <div class="info">
             <h1>Image search</h1>
             <p>We will implement OCR or Optical Character Recognition that will try to generate text from image and show the desired outputs if it matches in our database.</p>
-            <a href="#" class="about-btn">Try it!</a>
+            <a href="{% url 'home' %}" class="about-btn">Try it!</a>
         </div>
     </div>
 
@@ -49,7 +54,7 @@
         <div class="info">
             <h1>Voice search</h1>
             <p>We will implement audio based search using Speech to Text processing and show the desired outputs if it matches in our database.</p>
-            <a href="#" class="about-btn">Try it!</a>
+            <a href="{% url 'home' %}" class="about-btn">Try it!</a>
         </div>
     </div>
 
