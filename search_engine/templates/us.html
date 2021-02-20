@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Pharmex </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/us.css' %}">
+    <link rel = "icon" href="{% static 'css/images/image3.png' %}" type = "image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Caveat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/audio.css' %}">
+    <script src="{% static 'js/audio.js' %}"></script>
+
+</head>
+<body>
+<div class="topnav">
+
+        <div class="logo-image">
+            <img src="{% static 'css/images/image3.png' %}" class="img-fluid" style="width:63px;height:48px;">
+        </div>
+
+        <a href="{% url 'home' %}"><i class="fa fa-home"></i> Home</a>
+        <a class="active" href="{% url 'diseases' %}">Diseases</a>
+        <a href="{% url 'symptoms' %}">Symptoms</a>
+        <a href="{% url 'about' %}">Features</a>
+        <a href="{% url 'us' %}">About Us!</a>
+</div>
+<div class="h">
+<div class="about-section">
+  <h1 style="text-align:center">About Us</h1><br><br><hr>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'css/images/muskan.jpeg' %}" alt="Muskan" style="width:80%;height:80%;">
+      <div class="container">
+        <h2>Muskan Srivastava</h2>
+        <p class="title">Developer</p>
+        <p>A developer with tech competencies- Machine Learning and python</p>
+        <p>muskansrivastava40@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'css/images/neha.jpeg' %}" alt="Neha" style="width:80%;height:80%;">
+      <div class="container">
+        <h2>Neha Mehta</h2>
+        <p class="title">Developer</p>
+        <p>A learner, programmer with interest in Machine Learning and Full stack development </p>
+        <p>nainamehta2110@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="{% static 'css/images/nandini.jpeg' %}" alt="Nandini" style="width:80%;height:80%">
+      <div class="container">
+        <h2>Nandini Mittal</h2>
+        <p class="title">Developer</p>
+        <p>An undergraduate student with knowledge of Java and programming</p>
+        <p>nandinittt@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>
